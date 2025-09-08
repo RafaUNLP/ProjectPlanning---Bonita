@@ -8,7 +8,7 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_6hDWdIkBEfC0wLjW_C7-LA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_6hDWdYkBEfC0wLjW_C7-LA" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_6hDWdokBEfC0wLjW_C7-LA" documentation="Se carga el nombre y descripción del proyecto.&#xA;" name="Carga del proyecto" outgoing="_zPMocIwtEfCzwK1nV6fpZg" incoming="_6hDWh4kBEfC0wLjW_C7-LA" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_6hDWdokBEfC0wLjW_C7-LA" documentation="Se carga el nombre y descripción del proyecto.&#xA;" name="Cargar el proyecto" outgoing="_zPMocIwtEfCzwK1nV6fpZg" incoming="_6hDWh4kBEfC0wLjW_C7-LA" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_6hDWd4kBEfC0wLjW_C7-LA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_6hDWeIkBEfC0wLjW_C7-LA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_6hDWeYkBEfC0wLjW_C7-LA" name="" content="" returnTypeFixed="true"/>
@@ -23,7 +23,7 @@
           <contract xmi:type="process:Contract" xmi:id="_6hDWgYkBEfC0wLjW_C7-LA"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_6hDWgokBEfC0wLjW_C7-LA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_-gyRcIwtEfCzwK1nV6fpZg" documentation="Indicando nombre, fecha de inicio, fecha de fin y pedido de cobertura (económico, materiales o mano de obra)." name="Carga de etapas del proyecto" outgoing="_2EA-0IxAEfCzwK1nV6fpZg" incoming="_zPMocIwtEfCzwK1nV6fpZg" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_-gyRcIwtEfCzwK1nV6fpZg" documentation="Indicando nombre, fecha de inicio, fecha de fin y pedido de cobertura (económico, materiales o mano de obra)." name="Cargar las etapas del proyecto" outgoing="_2EA-0IxAEfCzwK1nV6fpZg" incoming="_zPMocIwtEfCzwK1nV6fpZg" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_mLPC4YwtEfCzwK1nV6fpZg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_mLPC4IwtEfCzwK1nV6fpZg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_mLPC4owtEfCzwK1nV6fpZg" name="" content="" returnTypeFixed="true"/>

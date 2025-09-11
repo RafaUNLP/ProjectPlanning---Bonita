@@ -53,7 +53,7 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_o_FI4YxAEfCzwK1nV6fpZg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_o_FI44xAEfCzwK1nV6fpZg" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_DArpkIxBEfCzwK1nV6fpZg" documentation="Aceptación y rechazo de las propuestas de colaboración recibidas." name="Evaluar propuestas de colaboración" outgoing="_BrKWMoxDEfCzwK1nV6fpZg" incoming="_82afsIxAEfCzwK1nV6fpZg _RQVmMIxBEfCzwK1nV6fpZg _1NL9IIxDEfCzwK1nV6fpZg" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_DArpkIxBEfCzwK1nV6fpZg" documentation="Se despliegan las propuestas de los colaboradores y se permite su aceptación y rechazo de las propuestas de colaboración recibidas." name="Evaluar propuestas de colaboración" outgoing="_BrKWMoxDEfCzwK1nV6fpZg" incoming="_82afsIxAEfCzwK1nV6fpZg _RQVmMIxBEfCzwK1nV6fpZg _1NL9IIxDEfCzwK1nV6fpZg" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_60HQwoxAEfCzwK1nV6fpZg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_60HQwYxAEfCzwK1nV6fpZg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_60HQw4xAEfCzwK1nV6fpZg" name="" content="" returnTypeFixed="true"/>

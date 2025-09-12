@@ -205,7 +205,7 @@
             </children>
             <children xmi:type="notation:Shape" xmi:id="_6GifM4znEfCAq7lsyMHjOQ" type="3008" element="_6Gh4IIznEfCAq7lsyMHjOQ" fontName="Ubuntu Sans">
               <children xmi:type="notation:DecorationNode" xmi:id="_6GjGQIznEfCAq7lsyMHjOQ" type="5026">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_6GjGQYznEfCAq7lsyMHjOQ" y="5"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_6GjGQYznEfCAq7lsyMHjOQ" y="-56"/>
               </children>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6GifNIznEfCAq7lsyMHjOQ" x="611" y="55" width="43" height="43"/>
             </children>

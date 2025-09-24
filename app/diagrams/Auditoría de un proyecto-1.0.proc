@@ -2,7 +2,7 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
   <process:MainProcess xmi:id="_yPhKwIxGEfCzwK1nV6fpZg" name="Auditoría de un proyecto" bonitaModelVersion="8">
     <elements xmi:type="process:Pool" xmi:id="_yPhKwYxGEfCzwK1nV6fpZg" name="Auditoría de los proyectos">
-      <elements xmi:type="process:Lane" xmi:id="_yPhKwoxGEfCzwK1nV6fpZg" name="Auditor" actor="_yPhK24xGEfCzwK1nV6fpZg">
+      <elements xmi:type="process:Lane" xmi:id="_yPhKwoxGEfCzwK1nV6fpZg" name="Auditor" actor="_9NV2cJl8EfCW4YD5dzsmXQ">
         <elements xmi:type="process:StartEvent" xmi:id="_yPhKw4xGEfCzwK1nV6fpZg" name="Inicio de la auditoría" outgoing="_fD7aMI9oEfCEvJblnQnOyQ">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_yPhKxIxGEfCzwK1nV6fpZg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_yPhKxYxGEfCzwK1nV6fpZg" name="" content="" returnTypeFixed="true"/>
@@ -54,7 +54,7 @@
           <completionCondition xmi:type="expression:Expression" xmi:id="_2XTxNozjEfCAq7lsyMHjOQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         </elements>
       </elements>
-      <elements xmi:type="process:Lane" xmi:id="_KicYUIzlEfCAq7lsyMHjOQ" name="Colaborador">
+      <elements xmi:type="process:Lane" xmi:id="_KicYUIzlEfCAq7lsyMHjOQ" name="Colaborador" actor="_7H_6kJl8EfCW4YD5dzsmXQ">
         <elements xmi:type="process:Task" xmi:id="_WGcYQIzrEfCAq7lsyMHjOQ" documentation="En caso de que no hayan pasado 5 días desde la creación de la observación, se resuelve la observación indicando una respuesta a la misma. En caso contrario, se la marca como no resuelta.&#xA;" name="Resolver observación" outgoing="_Cw4l4I9pEfCEvJblnQnOyQ" incoming="_nJhvcJTmEfC9lZpaAoIpBQ" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_VK8ZUIzrEfCAq7lsyMHjOQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_VK7yQYzrEfCAq7lsyMHjOQ" name="" content="" returnTypeFixed="true"/>
@@ -111,6 +111,9 @@
         <condition xmi:type="expression:Expression" xmi:id="_nJiWgZTmEfC9lZpaAoIpBQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_yPhK24xGEfCzwK1nV6fpZg" documentation="Este es un ejemplo de actor que está mapeado a cualquier usuario de la organización ACME" name="Employee actor" initiator="true"/>
+      <actors xmi:type="process:Actor" xmi:id="_oSIAwJl8EfCW4YD5dzsmXQ" name="Organicacion"/>
+      <actors xmi:type="process:Actor" xmi:id="_7H_6kJl8EfCW4YD5dzsmXQ" name="Organizacion"/>
+      <actors xmi:type="process:Actor" xmi:id="_9NV2cJl8EfCW4YD5dzsmXQ" name="Auditor"/>
       <contract xmi:type="process:Contract" xmi:id="_yPhK3IxGEfCzwK1nV6fpZg"/>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_yPhK3YxGEfCzwK1nV6fpZg">
         <name xmi:type="expression:Expression" xmi:id="_yPhK3oxGEfCzwK1nV6fpZg" content="" returnTypeFixed="true"/>

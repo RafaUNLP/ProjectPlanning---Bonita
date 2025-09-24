@@ -91,6 +91,11 @@
       <artifactId>bonita-connector-webservice</artifactId>
       <version>1.3.5</version>
     </dependency>
+    <dependency>
+      <groupId>org.bonitasoft.actorfilter</groupId>
+      <artifactId>bonita-actorfilter-initiator</artifactId>
+      <version>1.0.0</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>

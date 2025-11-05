@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connectorconfiguration:ConnectorConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://www.bonitasoft.org/model/connector/configuration" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" definitionId="email" version="1.2.0" name="prueba" modelVersion="8">
+  <parameters key="smtpHost">
+    <expression xsi:type="expression:Expression" name="localhost" content="localhost" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="smtpPort">
+    <expression xsi:type="expression:Expression" name="1025" content="1025" returnType="java.lang.Integer" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="sslSupport">
+    <expression xsi:type="expression:Expression" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="starttlsSupport">
+    <expression xsi:type="expression:Expression" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="trustCertificate">
+    <expression xsi:type="expression:Expression" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="userName">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="password">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="from">
+    <expression xsi:type="expression:Expression" name="noreply@projectplanning.com" content="noreply@projectplanning.com" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="returnPath">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="to">
+    <expression xsi:type="expression:Expression" name="to()" content="// Importa las APIs necesarias&#xA;import org.bonitasoft.engine.identity.User&#xA;import org.bonitasoft.engine.identity.ContactData&#xA;import org.bonitasoft.engine.identity.UserCriterion&#xA;import org.bonitasoft.engine.identity.UserNotFoundException&#xA;&#xA;try {&#xA;&#x9;&#xA;&#x9;&#xA;&#x9;def processInitiator = apiAccessor.getIdentityAPI().getUser(apiAccessor&#xA;&#x9;&#x9;&#x9;.getProcessAPI()&#xA;&#x9;&#x9;&#x9;.getProcessInstance(processInstanceId)&#xA;&#x9;&#x9;&#x9;.getStartedBy())&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#xA;&#x9;&#xA;&#x9;&#xA;    // 1. Obtener el ID del usuario que inició este proceso&#xA;    // (Esta variable la provee Bonita automáticamente)&#xA;    long initiatorId = processInstance.startedBy&#x9;&#xA;&#x9;&#xA;    // 2. Obtener la lista de TODOS los usuarios en la plataforma Bonita&#xA;    // (Ajusta los parámetros si tienes más de 1000 usuarios)&#xA;    List&lt;User> allUsers = apiAccessor.getIdentityAPI().getUsers(0, 1000, UserCriterion.DEFAULT)&#xA;&#xA;    // 3. Crear la lista de emails destinatarios&#xA;    List&lt;String> recipientEmails = []&#xA;&#xA;    for (User user : allUsers) {&#xA;        // 4. ¡LA LÓGICA CLAVE!&#xA;        // Solo agregar si NO es el usuario que creó el proyecto&#xA;        if (user.id != initiatorId) {&#xA;            &#xA;            // 5. Obtener los datos de contacto (email) del usuario&#xA;            ContactData contactData = apiAccessor.identityAPI.getUserContactData(user.id, false)&#xA;            &#xA;            if (contactData != null &amp;&amp; contactData.email != null &amp;&amp; !contactData.email.isEmpty()) {&#xA;                recipientEmails.add(contactData.email)&#xA;            }&#xA;        }&#xA;    }&#xA;&#xA;    // 6. Devolver la lista de emails separada por comas&#xA;    return recipientEmails.join(&quot;,&quot;)&#xA;&#xA;} catch (Exception e) {&#xA;    // Si algo falla, al menos envía el email a un admin para notificar el error&#xA;    return &quot;admin@tu-empresa.com&quot;&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+      <referencedElements xsi:type="expression:Expression" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+      <referencedElements xsi:type="expression:Expression" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+    </expression>
+  </parameters>
+  <parameters key="bcc">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="cc">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="subject">
+    <expression xsi:type="expression:Expression" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="html">
+    <expression xsi:type="expression:Expression" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="message">
+    <expression xsi:type="expression:Expression" type="TYPE_PATTERN" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="headers">
+    <expression xsi:type="expression:TableExpression"/>
+  </parameters>
+  <parameters key="charset">
+    <expression xsi:type="expression:Expression" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="replyTo">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="attachments">
+    <expression xsi:type="expression:ListExpression"/>
+  </parameters>
+</connectorconfiguration:ConnectorConfiguration>

@@ -566,7 +566,7 @@
       <description>Puede iniciar el proceso de auditor&#xed;a de organizaciones</description>
     </role>
     <role name="Organizacion">
-      <displayName>Organizaicon</displayName>
+      <displayName>Organizacion</displayName>
       <description>Una organizaci&#xf3;n</description>
     </role>
   </roles>
@@ -632,13 +632,13 @@
     </membership>
     <membership>
       <userName>april.sanchez</userName>
-      <roleName>member</roleName>
+      <roleName>Organizacion</roleName>
       <groupName>hr</groupName>
       <groupParentPath>/acme</groupParentPath>
     </membership>
     <membership>
       <userName>helen.kelly</userName>
-      <roleName>member</roleName>
+      <roleName>Organizacion</roleName>
       <groupName>hr</groupName>
       <groupParentPath>/acme</groupParentPath>
     </membership>
@@ -674,19 +674,19 @@
     </membership>
     <membership>
       <userName>jan.fisher</userName>
-      <roleName>member</roleName>
+      <roleName>Organizacion</roleName>
       <groupName>it</groupName>
       <groupParentPath>/acme</groupParentPath>
     </membership>
     <membership>
       <userName>isabel.bleasdale</userName>
-      <roleName>member</roleName>
+      <roleName>Organizacion</roleName>
       <groupName>marketing</groupName>
       <groupParentPath>/acme</groupParentPath>
     </membership>
     <membership>
       <userName>favio.riviera</userName>
-      <roleName>member</roleName>
+      <roleName>Organizacion</roleName>
       <groupName>marketing</groupName>
       <groupParentPath>/acme</groupParentPath>
     </membership>
@@ -698,13 +698,13 @@
     </membership>
     <membership>
       <userName>marc.marseau</userName>
-      <roleName>member</roleName>
+      <roleName>Organizacion</roleName>
       <groupName>rd</groupName>
       <groupParentPath>/acme/production</groupParentPath>
     </membership>
     <membership>
       <userName>joseph.hovell</userName>
-      <roleName>member</roleName>
+      <roleName>Organizacion</roleName>
       <groupName>rd</groupName>
       <groupParentPath>/acme/production</groupParentPath>
     </membership>
@@ -722,7 +722,7 @@
     </membership>
     <membership>
       <userName>daniela.angelo</userName>
-      <roleName>member</roleName>
+      <roleName>Organizacion</roleName>
       <groupName>europe</groupName>
       <groupParentPath>/acme/sales</groupParentPath>
     </membership>
@@ -740,7 +740,7 @@
     </membership>
     <membership>
       <userName>giovanna.almeida</userName>
-      <roleName>member</roleName>
+      <roleName>Organizacion</roleName>
       <groupName>latin_america</groupName>
       <groupParentPath>/acme/sales</groupParentPath>
     </membership>

@@ -43,7 +43,7 @@
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BiTSrMDcEfCwNdy4CFqKHw" key="body">
                 <expression xmi:type="expression:Expression" xmi:id="_BiTSrcDcEfCwNdy4CFqKHw" name="observacion" content="observacion" type="TYPE_VARIABLE" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:Data" xmi:id="_msjiwMDcEfCwNdy4CFqKHw" documentation="La observación realizada por le auditor" name="observacion" dataType="_yPhK8YxGEfCzwK1nV6fpZg"/>
+                  <referencedElements xmi:type="process:Data" xmi:id="_msjiwMDcEfCwNdy4CFqKHw" documentation="La observación realizada por el auditor" name="observacion" dataType="_yPhK8YxGEfCzwK1nV6fpZg"/>
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BiTSr8DcEfCwNdy4CFqKHw" key="do_not_follow_redirect">
@@ -118,7 +118,7 @@
             </configuration>
             <outputs xmi:type="expression:Operation" xmi:id="_BiTS3cDcEfCwNdy4CFqKHw">
               <leftOperand xmi:type="expression:Expression" xmi:id="_BiTS3sDcEfCwNdy4CFqKHw" name="observacion" content="observacion" type="TYPE_VARIABLE">
-                <referencedElements xmi:type="process:Data" xmi:id="_msmmEMDcEfCwNdy4CFqKHw" documentation="La observación realizada por le auditor" name="observacion" dataType="_yPhK8YxGEfCzwK1nV6fpZg"/>
+                <referencedElements xmi:type="process:Data" xmi:id="_msmmEMDcEfCwNdy4CFqKHw" documentation="La observación realizada por el auditor" name="observacion" dataType="_yPhK8YxGEfCzwK1nV6fpZg"/>
               </leftOperand>
               <rightOperand xmi:type="expression:Expression" xmi:id="_BiTS38DcEfCwNdy4CFqKHw" name="bodyAsString" content="bodyAsString" type="CONNECTOR_OUTPUT_TYPE">
                 <referencedElements xmi:type="definition:Output" xmi:id="_BiTS4MDcEfCwNdy4CFqKHw" name="bodyAsString" type="java.lang.String"/>
@@ -200,7 +200,7 @@
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_detg9MDhEfCe5_Ua1_MIQA" key="to">
                 <expression xmi:type="expression:Expression" xmi:id="_detg9cDhEfCe5_Ua1_MIQA" name="to()" content="import org.bonitasoft.engine.identity.User&#xA;import org.bonitasoft.engine.identity.ContactData&#xA;import org.bonitasoft.engine.identity.UserCriterion&#xA;import org.bonitasoft.engine.identity.UserNotFoundException&#xA;import groovy.json.JsonSlurper;&#xA;&#xA;try {&#xA;&#x9;//NECESITO QUE LAS COLABORACIONES RECUPERADAS DEL CLOUD VENGAN CON EL 'usuarioColaborador' DEL USUARIO EN BONITA ASIGNADO a colaborar&#xA;&#x9;JsonSlurper parser = new JsonSlurper();&#xA;&#x9;String colaboracionId = parser.parseText(observacion).getAt(&quot;colaboracionId&quot;);&#xA;&#x9;Map colaboracion = ((List&lt;Map>) parser.parseText(json)).find{it.id = colaboracionId };&#xA;&#x9;User user = apiAccessor.getIdentityAPI().getUserByUserName(colaboracion.get(&quot;usuarioColaborador&quot;));&#xA;&#xA;&#x9;ContactData contactData = apiAccessor.getIdentityAPI().getUserContactData(user.id, false);&#xA;&#x9;if (contactData != null &amp;&amp; contactData.email != null &amp;&amp; !contactData.email.isEmpty())&#xA;&#x9;&#x9;return contactData.email;&#xA;&#x9;else&#xA;&#x9;&#x9;return &quot;admin@projectplanning.com&quot;;&#xA;&#x9;&#x9;&#xA;} catch (Exception e) {&#xA;&#x9;return &quot;admin@projectplanning.com&quot;&#xA;}&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:Data" xmi:id="_FgBg4MDmEfCe5_Ua1_MIQA" documentation="La observación realizada por le auditor" name="observacion" dataType="_yPhK8YxGEfCzwK1nV6fpZg"/>
+                  <referencedElements xmi:type="process:Data" xmi:id="_FgBg4MDmEfCe5_Ua1_MIQA" documentation="La observación realizada por el auditor" name="observacion" dataType="_yPhK8YxGEfCzwK1nV6fpZg"/>
                   <referencedElements xmi:type="expression:Expression" xmi:id="_FgBg4cDmEfCe5_Ua1_MIQA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
                   <referencedElements xmi:type="process:Data" xmi:id="_FgBg4sDmEfCe5_Ua1_MIQA" documentation="Json que responde el CLoud" name="json" dataType="_yPhK8YxGEfCzwK1nV6fpZg"/>
                 </expression>
@@ -582,7 +582,9 @@
           <connectors xmi:type="process:Connector" xmi:id="_a8t3gMDcEfCwNdy4CFqKHw" documentation="La marca como resuelta en el Cloud" name="Resolver Observacion" definitionId="rest-put" event="ON_FINISH" definitionVersion="1.4.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_a8t3gcDcEfCwNdy4CFqKHw" definitionId="rest-put" version="1.4.0" modelVersion="8">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_a8t3gsDcEfCwNdy4CFqKHw" key="url">
-                <expression xmi:type="expression:Expression" xmi:id="_a8t3g8DcEfCwNdy4CFqKHw" name="https://proyectplanning-cloud.onrender.com/Observacion" content="https://proyectplanning-cloud.onrender.com/Observacion" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_a8t3g8DcEfCwNdy4CFqKHw" name="url()" content="'https://proyectplanning-cloud.onrender.com/Observacion'&#xA;&#xA;import groovy.json.JsonSlurper;&#xA;&#xA;JsonSlurper parser = new JsonSlurper();&#xA;Map json = (Map) parser.parseText(observacion);&#xA;return &quot;https://proyectplanning-cloud.onrender.com/Observacion/&quot; + (String) json.get(&quot;Id&quot;);" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Data" xmi:id="_QgGe0MJ1EfC9TPHxtdEhkg" documentation="La observación realizada por el auditor" name="observacion" dataType="_yPhK8YxGEfCzwK1nV6fpZg"/>
+                </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_a8t3hMDcEfCwNdy4CFqKHw" key="contentType">
                 <expression xmi:type="expression:Expression" xmi:id="_a8t3hcDcEfCwNdy4CFqKHw" name="application/json" content="application/json" returnTypeFixed="true"/>
@@ -605,7 +607,7 @@
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_a8t3jMDcEfCwNdy4CFqKHw" key="body">
                 <expression xmi:type="expression:Expression" xmi:id="_a8t3jcDcEfCwNdy4CFqKHw" name="observacion" content="observacion" type="TYPE_VARIABLE" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:Data" xmi:id="_uBRtkMDcEfCwNdy4CFqKHw" documentation="La observación realizada por le auditor" name="observacion" dataType="_yPhK8YxGEfCzwK1nV6fpZg"/>
+                  <referencedElements xmi:type="process:Data" xmi:id="_uBRtkMDcEfCwNdy4CFqKHw" documentation="La observación realizada por el auditor" name="observacion" dataType="_yPhK8YxGEfCzwK1nV6fpZg"/>
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_a8t3jsDcEfCwNdy4CFqKHw" key="do_not_follow_redirect">
@@ -782,7 +784,7 @@
       <data xmi:type="process:Data" xmi:id="_FG7scMDbEfCwNdy4CFqKHw" documentation="Indica si terminar o no el proceso" name="terminar" dataType="_yPhK7IxGEfCzwK1nV6fpZg">
         <defaultValue xmi:type="expression:Expression" xmi:id="_FG7sccDbEfCwNdy4CFqKHw" name="false" content="false" returnType="java.lang.Boolean"/>
       </data>
-      <data xmi:type="process:Data" xmi:id="_gS7HMMDcEfCwNdy4CFqKHw" documentation="La observación realizada por le auditor" name="observacion" dataType="_yPhK8YxGEfCzwK1nV6fpZg">
+      <data xmi:type="process:Data" xmi:id="_gS7HMMDcEfCwNdy4CFqKHw" documentation="La observación realizada por el auditor" name="observacion" dataType="_yPhK8YxGEfCzwK1nV6fpZg">
         <defaultValue xmi:type="expression:Expression" xmi:id="_gS7HMcDcEfCwNdy4CFqKHw" content=""/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_yPhK1IxGEfCzwK1nV6fpZg">

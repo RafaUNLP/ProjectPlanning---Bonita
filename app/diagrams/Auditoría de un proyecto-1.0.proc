@@ -780,7 +780,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_PjSXsbf1EfCRiP-1Mqvk0g" content=""/>
       </data>
       <data xmi:type="process:Data" xmi:id="_FG7scMDbEfCwNdy4CFqKHw" documentation="Indica si terminar o no el proceso" name="terminar" dataType="_yPhK7IxGEfCzwK1nV6fpZg">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_FG7sccDbEfCwNdy4CFqKHw" content="" returnType="java.lang.Boolean"/>
+        <defaultValue xmi:type="expression:Expression" xmi:id="_FG7sccDbEfCwNdy4CFqKHw" name="false" content="false" returnType="java.lang.Boolean"/>
       </data>
       <data xmi:type="process:Data" xmi:id="_gS7HMMDcEfCwNdy4CFqKHw" documentation="La observación realizada por le auditor" name="observacion" dataType="_yPhK8YxGEfCzwK1nV6fpZg">
         <defaultValue xmi:type="expression:Expression" xmi:id="_gS7HMcDcEfCwNdy4CFqKHw" content=""/>

@@ -547,7 +547,7 @@
       <enabled>true</enabled>
       <password encrypted="false">bpm</password>
     </user>
-    <user userName="Auditor">
+    <user userName="auditor">
       <firstName>Consejo</firstName>
       <lastName>Directivo</lastName>
       <personalData/>
@@ -751,12 +751,12 @@
       <groupParentPath>/acme/sales</groupParentPath>
     </membership>
     <membership>
-      <userName>Auditor</userName>
+      <userName>auditor</userName>
       <roleName>member</roleName>
       <groupName>acme</groupName>
     </membership>
     <membership>
-      <userName>Auditor</userName>
+      <userName>auditor</userName>
       <roleName>Auditor</roleName>
       <groupName>acme</groupName>
     </membership>

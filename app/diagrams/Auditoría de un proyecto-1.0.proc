@@ -165,7 +165,7 @@
           <contract xmi:type="process:Contract" xmi:id="_NEi2x4znEfCAq7lsyMHjOQ"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_NEi2yoznEfCAq7lsyMHjOQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:ServiceTask" xmi:id="_ZWODwIznEfCAq7lsyMHjOQ" documentation="Se almacena la observación y se notifica a los colaboradores que deben responder por la misma.&#xA;&#xA;" name="Notificar observaciones" outgoing="_nJhvcJTmEfC9lZpaAoIpBQ" incoming="_fjl40JTmEfC9lZpaAoIpBQ">
+        <elements xmi:type="process:ServiceTask" xmi:id="_ZWODwIznEfCAq7lsyMHjOQ" documentation="Se almacena la observación y se notifica al colaborador que debe responder por la misma.&#xA;&#xA;" name="Notificar observación" outgoing="_nJhvcJTmEfC9lZpaAoIpBQ" incoming="_fjl40JTmEfC9lZpaAoIpBQ">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_Xv_FwYznEfCAq7lsyMHjOQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_Xv_FwIznEfCAq7lsyMHjOQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_Xv_FwoznEfCAq7lsyMHjOQ" name="" content="" returnTypeFixed="true"/>

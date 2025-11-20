@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connectorconfiguration:ConnectorConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://www.bonitasoft.org/model/connector/configuration" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:process="http://www.bonitasoft.org/ns/bpm/process" definitionId="rest-post" version="1.4.0" name="cargar colab" modelVersion="8">
+  <parameters key="url">
+    <expression xsi:type="expression:Expression" name="https://proyectplanning-cloud.onrender.com/Colaboracion" content="https://proyectplanning-cloud.onrender.com/Colaboracion" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="contentType">
+    <expression xsi:type="expression:Expression" name="application/json" content="application/json" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="charset">
+    <expression xsi:type="expression:Expression" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="urlCookies">
+    <expression xsi:type="expression:TableExpression"/>
+  </parameters>
+  <parameters key="urlHeaders">
+    <expression xsi:type="expression:TableExpression">
+      <expressions>
+        <expressions name="Authorization" content="Authorization"/>
+        <expressions name="Bearer token" content="return &quot;Bearer&quot; + token" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+          <referencedElements xsi:type="process:Data" documentation="Token JWT para mandar en el header al Cloud" name="token">
+            <dataType xsi:type="process:StringType" href="platform:/resource/projectplanning-app/diagrams/Proceso%20de%20realización%20de%20un%20proyecto-1.0.proc#_6hDWoIkBEfC0wLjW_C7-LA"/>
+          </referencedElements>
+        </expressions>
+      </expressions>
+    </expression>
+  </parameters>
+  <parameters key="add_bonita_context_headers">
+    <expression xsi:type="expression:Expression" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="bonita_activity_instance_id_header">
+    <expression xsi:type="expression:Expression" name="X-Bonita-Activity-Instance-Id" content="X-Bonita-Activity-Instance-Id" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="bonita_process_instance_id_header">
+    <expression xsi:type="expression:Expression" name="X-Bonita-Process-Instance-Id" content="X-Bonita-Process-Instance-Id" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="bonita_root_process_instance_id_header">
+    <expression xsi:type="expression:Expression" name="X-Bonita-Root-Process-Instance-Id" content="X-Bonita-Root-Process-Instance-Id" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="bonita_process_definition_id_header">
+    <expression xsi:type="expression:Expression" name="X-Bonita-Process-Definition-Id" content="X-Bonita-Process-Definition-Id" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="bonita_task_assignee_id_header">
+    <expression xsi:type="expression:Expression" name="X-Bonita-Task-Assignee-Id" content="X-Bonita-Task-Assignee-Id" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="body">
+    <expression xsi:type="expression:Expression" name="" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="do_not_follow_redirect">
+    <expression xsi:type="expression:Expression" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="ignore_body">
+    <expression xsi:type="expression:Expression" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="fail_on_http_4xx">
+    <expression xsi:type="expression:Expression" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="fail_on_http_5xx">
+    <expression xsi:type="expression:Expression" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="failure_exception_codes">
+    <expression xsi:type="expression:TableExpression"/>
+  </parameters>
+  <parameters key="retry_on_http_5xx">
+    <expression xsi:type="expression:Expression" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="retry_additional_codes">
+    <expression xsi:type="expression:TableExpression"/>
+  </parameters>
+  <parameters key="max_body_content_printed">
+    <expression xsi:type="expression:Expression" name="1000" content="1000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="sensitive_headers_printed">
+    <expression xsi:type="expression:Expression" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="TLS">
+    <expression xsi:type="expression:Expression" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="hostname_verifier">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="trust_store_file">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="trust_store_password">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="key_store_file">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="key_store_password">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="auth_type">
+    <expression xsi:type="expression:Expression" name="NONE" content="NONE" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="auth_username">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="auth_password">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="auth_host">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="auth_port">
+    <expression xsi:type="expression:Expression" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="auth_realm">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="auth_preemptive">
+    <expression xsi:type="expression:Expression" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="proxy_protocol">
+    <expression xsi:type="expression:Expression" name="HTTP" content="HTTP" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="proxy_host">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="proxy_port">
+    <expression xsi:type="expression:Expression" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="proxy_username">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="proxy_password">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="automatic_proxy_resolution">
+    <expression xsi:type="expression:Expression" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="socket_timeout_ms">
+    <expression xsi:type="expression:Expression" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="connection_timeout_ms">
+    <expression xsi:type="expression:Expression" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="trust_strategy">
+    <expression xsi:type="expression:Expression" name="DEFAULT" content="DEFAULT" returnTypeFixed="true"/>
+  </parameters>
+</connectorconfiguration:ConnectorConfiguration>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connectorconfiguration:ConnectorConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://www.bonitasoft.org/model/connector/configuration" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:process="http://www.bonitasoft.org/ns/bpm/process" definitionId="email" version="1.2.0" name="aa" modelVersion="8">
+  <parameters key="smtpHost">
+    <expression xsi:type="expression:Expression" name="localhost" content="localhost" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="smtpPort">
+    <expression xsi:type="expression:Expression" name="1025" content="1025" returnType="java.lang.Integer" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="sslSupport">
+    <expression xsi:type="expression:Expression" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="starttlsSupport">
+    <expression xsi:type="expression:Expression" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="trustCertificate">
+    <expression xsi:type="expression:Expression" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="userName">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="password">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="from">
+    <expression xsi:type="expression:Expression" name="noreply@projectplanning.com" content="noreply@projectplanning.com" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="returnPath">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="to">
+    <expression xsi:type="expression:Expression" name="to()" content="import org.bonitasoft.engine.identity.User&#xA;import org.bonitasoft.engine.identity.ContactData&#xA;import org.bonitasoft.engine.identity.UserCriterion&#xA;import org.bonitasoft.engine.identity.UserNotFoundException&#xA;import groovy.json.JsonSlurper&#xA;&#xA;try {&#xA;&#xA;&#x9;def organizacionProponenteId = new JsonSlurper&#xA;&#x9;&#xA;&#x9;&#xA;&#x9;ContactData contactData = apiAccessor.getIdentityAPI().getUserContactData(processInitiator.id, false)&#xA;&#xA;&#x9;return contactData.email&#xA;&#x9;&#xA;&#x9;&#xA;} catch (Exception e) {&#xA;&#x9;return &quot;admin@projectplanning.com&quot;&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+      <referencedElements xsi:type="expression:Expression" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+    </expression>
+  </parameters>
+  <parameters key="bcc">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="cc">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="subject">
+    <expression xsi:type="expression:Expression" name="¡Un nuevo pedido de colaboracion se ha creado en en tu proyecto!" content="¡Un nuevo pedido de colaboracion se ha creado en en tu proyecto!" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="html">
+    <expression xsi:type="expression:Expression" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="message">
+    <expression xsi:type="expression:Expression" name="newScript()" content="// Importa las APIs necesarias&#xA;import org.bonitasoft.engine.identity.User&#xA;import org.bonitasoft.engine.identity.ContactData&#xA;import org.bonitasoft.engine.identity.UserCriterion&#xA;import org.bonitasoft.engine.identity.UserNotFoundException&#xA;&#xA;import groovy.json.JsonSlurper&#xA;&#xA;// Importar clases para imprimir el Stack Trace&#xA;import java.io.PrintWriter&#xA;import java.io.StringWriter&#xA;&#xA;try {&#xA;&#xA;&#x9;def processInitiator = apiAccessor.getIdentityAPI().getUser(apiAccessor.getProcessAPI()&#xA;&#x9;&#x9;&#x9;&#x9;.getProcessInstance(processInstanceId)&#xA;&#x9;&#x9;&#x9;&#x9;.getStartedBy())&#xA;&#xA;&#x9;&#xA;&#x9;String proyectoJson = proyecto;&#xA;&#x9;def proyectoData = new JsonSlurper().parseText(proyectoJson)&#xA;&#xA;&#x9;String mensaje = &quot;&quot;&quot;&#xA;    Hola,\n&#xA;&#x9;\n&#xA;    \nSe ha creado un nuevo pedido de colaboración en tu proyecto de ProjectPlanning.&#xA;&#x9;\n&#x9;&#xA;    \nProyecto: ${proyectoData.Nombre}&#xA;    \nDescripción: ${proyectoData.Descripcion}&#xA;&#x9;\n&#xA;    \nPor favor, inicia sesión en la plataforma para ver más detalles.&#xA;&#x9;\n&#xA;    \nSaludos,&#xA;    \nEl equipo de ProjectPlanning&#xA;    &quot;&quot;&quot;&#xA;&#x9;return mensaje&#xA;&#xA;} catch (Exception e) {&#xA;&#x9;return &quot;&quot;&quot;&#xA;&#x9;&#x9;¡Un nuevo proyecto se ha creado en ProjectPlanning! \n&#xA;&#x9;&#x9;Dirígase a la aplicación para colaborar.\n&#xA;&#x9;&#x9;\n&#xA;&#x9;&#x9;Saludos coordiales,\n&#xA;&#x9;&#x9;Equipo de ProjectPlanning&#xA;&#x9;&quot;&quot;&quot;&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+      <referencedElements xsi:type="expression:Expression" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+      <referencedElements xsi:type="expression:Expression" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+      <referencedElements xsi:type="process:Data" documentation="JSON de un proyecto cargado" name="proyecto">
+        <dataType xsi:type="process:StringType" href="platform:/resource/projectplanning-app/diagrams/Proceso%20de%20realización%20de%20un%20proyecto-1.0.proc#_6hDWoIkBEfC0wLjW_C7-LA"/>
+      </referencedElements>
+    </expression>
+  </parameters>
+  <parameters key="headers">
+    <expression xsi:type="expression:TableExpression"/>
+  </parameters>
+  <parameters key="charset">
+    <expression xsi:type="expression:Expression" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="replyTo">
+    <expression xsi:type="expression:Expression" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="attachments">
+    <expression xsi:type="expression:ListExpression"/>
+  </parameters>
+</connectorconfiguration:ConnectorConfiguration>

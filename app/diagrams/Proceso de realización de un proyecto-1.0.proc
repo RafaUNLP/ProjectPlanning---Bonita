@@ -27,7 +27,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_6hDWfYkBEfC0wLjW_C7-LA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_6hDWfokBEfC0wLjW_C7-LA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_6hDWf4kBEfC0wLjW_C7-LA">
-            <targetForm xmi:type="expression:Expression" xmi:id="_zIEYAMScEfCMI_Diw794jw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_6j8UcMoSEfCDqMnr5ml0tw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_6hDWgYkBEfC0wLjW_C7-LA"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_6hDWgokBEfC0wLjW_C7-LA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -207,7 +207,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_60HQyIxAEfCzwK1nV6fpZg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_60HQx4xAEfCzwK1nV6fpZg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_DArpmoxBEfCzwK1nV6fpZg">
-            <targetForm xmi:type="expression:Expression" xmi:id="_zIEYAcScEfCMI_Diw794jw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_6j8UccoSEfCDqMnr5ml0tw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_DArpmYxBEfCzwK1nV6fpZg"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_DArpnIxBEfCzwK1nV6fpZg" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -251,9 +251,9 @@
                 <expression xmi:type="expression:Expression" xmi:id="_5OjxAMSjEfCMI_Diw794jw" content="" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_5OjxAcSjEfCMI_Diw794jw" key="to">
-                <expression xmi:type="expression:Expression" xmi:id="_5OjxAsSjEfCMI_Diw794jw" name="to()" content="import org.bonitasoft.engine.identity.User&#xA;import org.bonitasoft.engine.identity.ContactData&#xA;import org.bonitasoft.engine.identity.UserCriterion&#xA;import org.bonitasoft.engine.identity.UserNotFoundException&#xA;import groovy.json.JsonSlurper&#xA;&#xA;try {&#xA;&#xA;&#x9;def processInitiator = apiAccessor.getIdentityAPI().getUser(apiAccessor.getProcessAPI()&#xA;&#x9;&#x9;&#x9;&#x9;.getProcessInstance(processInstanceId)&#xA;&#x9;&#x9;&#x9;&#x9;.getStartedBy())&#xA;&#x9;&#xA;&#x9;&#xA;&#x9;&#xA;&#x9;ContactData contactData = apiAccessor.getIdentityAPI().getUserContactData(processInitiator.id, false)&#xA;&#xA;&#x9;return contactData.email&#xA;&#x9;&#xA;&#x9;&#xA;} catch (Exception e) {&#xA;&#x9;return &quot;admin@projectplanning.com&quot;&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_GjD0oMTrEfCMI_Diw794jw" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_GjFp0MTrEfCMI_Diw794jw" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                <expression xmi:type="expression:Expression" xmi:id="_5OjxAsSjEfCMI_Diw794jw" name="to()" content="import org.bonitasoft.engine.identity.User&#xA;import org.bonitasoft.engine.identity.ContactData&#xA;import org.bonitasoft.engine.identity.UserCriterion&#xA;import org.bonitasoft.engine.identity.UserNotFoundException&#xA;import groovy.json.JsonSlurper&#xA;&#xA;try {&#xA;&#xA;&#x9;def colaboracionJson = new JsonSlurper().parseText(colaboracionOut)&#xA;&#x9;&#xA;&#x9;&#xA;&#x9;ContactData contactData = apiAccessor.getIdentityAPI().getUserContactData(colaboracionJson.organizacionComprometidaId, false)&#xA;&#xA;&#x9;return contactData.email&#xA;&#x9;&#xA;&#x9;&#xA;} catch (Exception e) {&#xA;&#x9;return &quot;admin@projectplanning.com&quot;&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_hW5R8MZIEfCJ38GMBEsJlQ" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                  <referencedElements xmi:type="process:Data" xmi:id="_hW6gEMZIEfCJ38GMBEsJlQ" name="colaboracionOut" dataType="_6hDWoIkBEfC0wLjW_C7-LA"/>
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_5OjxBcSjEfCMI_Diw794jw" key="bcc">
@@ -263,16 +263,16 @@
                 <expression xmi:type="expression:Expression" xmi:id="_5OjxCMSjEfCMI_Diw794jw" content="" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_5OjxCcSjEfCMI_Diw794jw" key="subject">
-                <expression xmi:type="expression:Expression" xmi:id="_5OjxCsSjEfCMI_Diw794jw" name="¡Un nuevo pedido de colaboracion se ha creado en en tu proyecto!" content="¡Un nuevo pedido de colaboracion se ha creado en en tu proyecto!" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_5OjxCsSjEfCMI_Diw794jw" name="Tu propuesta de colaboracion ha sido aceptado." content="Tu propuesta de colaboracion ha sido aceptado." returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_5OjxC8SjEfCMI_Diw794jw" key="html">
                 <expression xmi:type="expression:Expression" xmi:id="_5OjxDMSjEfCMI_Diw794jw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_5OjxDcSjEfCMI_Diw794jw" key="message">
-                <expression xmi:type="expression:Expression" xmi:id="_5OjxDsSjEfCMI_Diw794jw" name="newScript()" content="// Importa las APIs necesarias&#xA;import org.bonitasoft.engine.identity.User&#xA;import org.bonitasoft.engine.identity.ContactData&#xA;import org.bonitasoft.engine.identity.UserCriterion&#xA;import org.bonitasoft.engine.identity.UserNotFoundException&#xA;&#xA;import groovy.json.JsonSlurper&#xA;&#xA;// Importar clases para imprimir el Stack Trace&#xA;import java.io.PrintWriter&#xA;import java.io.StringWriter&#xA;&#xA;try {&#xA;&#xA;&#x9;def processInitiator = apiAccessor.getIdentityAPI().getUser(apiAccessor.getProcessAPI()&#xA;&#x9;&#x9;&#x9;&#x9;.getProcessInstance(processInstanceId)&#xA;&#x9;&#x9;&#x9;&#x9;.getStartedBy())&#xA;&#xA;&#x9;&#xA;&#x9;String proyectoJson = proyecto;&#xA;&#x9;def proyectoData = new JsonSlurper().parseText(proyectoJson)&#xA;&#xA;&#x9;String mensaje = &quot;&quot;&quot;&#xA;    Hola,\n&#xA;&#x9;\n&#xA;    \nSe ha creado un nuevo pedido de colaboración en tu proyecto de ProjectPlanning.&#xA;&#x9;\n&#x9;&#xA;    \nProyecto: ${proyectoData.Nombre}&#xA;    \nDescripción: ${proyectoData.Descripcion}&#xA;&#x9;\n&#xA;    \nPor favor, inicia sesión en la plataforma para ver más detalles.&#xA;&#x9;\n&#xA;    \nSaludos,&#xA;    \nEl equipo de ProjectPlanning&#xA;    &quot;&quot;&quot;&#xA;&#x9;return mensaje&#xA;&#xA;} catch (Exception e) {&#xA;&#x9;return &quot;&quot;&quot;&#xA;&#x9;&#x9;¡Un nuevo proyecto se ha creado en ProjectPlanning! \n&#xA;&#x9;&#x9;Dirígase a la aplicación para colaborar.\n&#xA;&#x9;&#x9;\n&#xA;&#x9;&#x9;Saludos coordiales,\n&#xA;&#x9;&#x9;Equipo de ProjectPlanning&#xA;&#x9;&quot;&quot;&quot;&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_5OjxD8SjEfCMI_Diw794jw" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_5OjxEMSjEfCMI_Diw794jw" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
-                  <referencedElements xmi:type="process:Data" xmi:id="_5OjxEcSjEfCMI_Diw794jw" documentation="JSON de un proyecto cargado" name="proyecto" dataType="_6hDWoIkBEfC0wLjW_C7-LA"/>
+                <expression xmi:type="expression:Expression" xmi:id="_5OjxDsSjEfCMI_Diw794jw" name="newScript()" content="// Importa las APIs necesarias&#xA;import org.bonitasoft.engine.identity.User&#xA;import org.bonitasoft.engine.identity.ContactData&#xA;import org.bonitasoft.engine.identity.UserCriterion&#xA;import org.bonitasoft.engine.identity.UserNotFoundException&#xA;&#xA;import groovy.json.JsonSlurper&#xA;&#xA;// Importar clases para imprimir el Stack Trace&#xA;import java.io.PrintWriter&#xA;import java.io.StringWriter&#xA;&#xA;try {&#xA;&#xA;&#x9;def processInitiator = apiAccessor.getIdentityAPI().getUser(apiAccessor.getProcessAPI()&#xA;&#x9;&#x9;&#x9;&#x9;.getProcessInstance(processInstanceId)&#xA;&#x9;&#x9;&#x9;&#x9;.getStartedBy())&#xA;&#xA;&#x9;&#xA;&#x9;String proyectoJson = proyecto;&#xA;&#x9;def proyectoData = new JsonSlurper().parseText(proyectoJson)&#xA;&#xA;&#x9;String mensaje = &quot;&quot;&quot;&#xA;    Hola,\n&#xA;&#x9;\n&#xA;    \nTu pedido de colaboracion para el proyecto \b${proyectoData.Nombre}\b en ProjectPlanning ha sido aceptado.&#xA;&#x9;\n&#x9;&#xA;    \nPor favor, inicia sesión en la plataforma para ver más detalles.&#xA;&#x9;\n&#xA;    \nSaludos,&#xA;    \nEl equipo de ProjectPlanning&#xA;    &quot;&quot;&quot;&#xA;&#x9;return mensaje&#xA;&#xA;} catch (Exception e) {&#xA;&#x9;return &quot;&quot;&quot;&#xA;&#x9;&#x9;Tu pedido de colaboracion en ProjectPlanning ha sido aceptado \n&#xA;&#x9;&#x9;Dirígase a la aplicación para más información.\n&#xA;&#x9;&#x9;\n&#xA;&#x9;&#x9;Saludos coordiales,\n&#xA;&#x9;&#x9;Equipo de ProjectPlanning&#xA;&#x9;&quot;&quot;&quot;&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_HamwAMlyEfCDqMnr5ml0tw" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_Han-IMlyEfCDqMnr5ml0tw" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                  <referencedElements xmi:type="process:Data" xmi:id="_Han-IclyEfCDqMnr5ml0tw" documentation="JSON de un proyecto cargado" name="proyecto" dataType="_6hDWoIkBEfC0wLjW_C7-LA"/>
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_5OjxEsSjEfCMI_Diw794jw" key="headers">
@@ -305,7 +305,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_3h_4aIxDEfCzwK1nV6fpZg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_3h_4Z4xDEfCzwK1nV6fpZg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_ddle2YxEEfCzwK1nV6fpZg">
-            <targetForm xmi:type="expression:Expression" xmi:id="_zIEYAsScEfCMI_Diw794jw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_6j8UcsoSEfCDqMnr5ml0tw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_ddle2IxEEfCzwK1nV6fpZg"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_ddle24xEEfCzwK1nV6fpZg" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -320,7 +320,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_ffrc94xFEfCzwK1nV6fpZg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_ffrc9oxFEfCzwK1nV6fpZg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_YJonCoxGEfCzwK1nV6fpZg">
-            <targetForm xmi:type="expression:Expression" xmi:id="_zIEYA8ScEfCMI_Diw794jw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_6j8Uc8oSEfCDqMnr5ml0tw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_YJonCYxGEfCzwK1nV6fpZg"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_YJonDIxGEfCzwK1nV6fpZg" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -587,7 +587,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_RTe2R4xAEfCzwK1nV6fpZg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_RTe2RoxAEfCzwK1nV6fpZg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_STe6uoxAEfCzwK1nV6fpZg">
-            <targetForm xmi:type="expression:Expression" xmi:id="_zIEYBMScEfCMI_Diw794jw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_6j8UdMoSEfCDqMnr5ml0tw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_STe6uYxAEfCzwK1nV6fpZg"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_STe6vIxAEfCzwK1nV6fpZg" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -680,7 +680,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_qSpFt4xEEfCzwK1nV6fpZg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_qSpFtoxEEfCzwK1nV6fpZg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_w5yY2oxEEfCzwK1nV6fpZg">
-            <targetForm xmi:type="expression:Expression" xmi:id="_zIEYBcScEfCMI_Diw794jw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_6j8UdcoSEfCDqMnr5ml0tw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_w5yY2YxEEfCzwK1nV6fpZg"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_w5yY3IxEEfCzwK1nV6fpZg" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -713,7 +713,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_qx4sAMSjEfCMI_Diw794jw" content=""/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_6hDWg4kBEfC0wLjW_C7-LA">
-        <targetForm xmi:type="expression:Expression" xmi:id="_zIEYBsScEfCMI_Diw794jw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_6j8UdsoSEfCDqMnr5ml0tw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_6hDWhYkBEfC0wLjW_C7-LA">
         <targetForm xmi:type="expression:Expression" xmi:id="_6hDWhokBEfC0wLjW_C7-LA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>

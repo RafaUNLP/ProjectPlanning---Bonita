@@ -557,10 +557,6 @@
     </user>
   </users>
   <roles>
-    <role name="member">
-      <displayName>Member</displayName>
-      <description></description>
-    </role>
     <role name="Auditor">
       <displayName>Auditor</displayName>
       <description>Puede iniciar el proceso de auditor&#xed;a de organizaciones</description>
@@ -627,7 +623,7 @@
   <memberships>
     <membership>
       <userName>william.jobs</userName>
-      <roleName>member</roleName>
+      <roleName>Organizacion</roleName>
       <groupName>acme</groupName>
     </membership>
     <membership>
@@ -643,32 +639,26 @@
       <groupParentPath>/acme</groupParentPath>
     </membership>
     <membership>
-      <userName>walter.bates</userName>
-      <roleName>member</roleName>
-      <groupName>hr</groupName>
-      <groupParentPath>/acme</groupParentPath>
-    </membership>
-    <membership>
       <userName>zachary.williamson</userName>
-      <roleName>member</roleName>
+      <roleName>Organizacion</roleName>
       <groupName>finance</groupName>
       <groupParentPath>/acme</groupParentPath>
     </membership>
     <membership>
       <userName>patrick.gardenier</userName>
-      <roleName>member</roleName>
+      <roleName>Organizacion</roleName>
       <groupName>finance</groupName>
       <groupParentPath>/acme</groupParentPath>
     </membership>
     <membership>
       <userName>virginie.jomphe</userName>
-      <roleName>member</roleName>
+      <roleName>Organizacion</roleName>
       <groupName>finance</groupName>
       <groupParentPath>/acme</groupParentPath>
     </membership>
     <membership>
       <userName>thorsten.hartmann</userName>
-      <roleName>member</roleName>
+      <roleName>Organizacion</roleName>
       <groupName>finance</groupName>
       <groupParentPath>/acme</groupParentPath>
     </membership>
@@ -692,7 +682,7 @@
     </membership>
     <membership>
       <userName>michael.morrison</userName>
-      <roleName>member</roleName>
+      <roleName>Organizacion</roleName>
       <groupName>production</groupName>
       <groupParentPath>/acme</groupParentPath>
     </membership>
@@ -710,13 +700,13 @@
     </membership>
     <membership>
       <userName>mauro.zetticci</userName>
-      <roleName>member</roleName>
+      <roleName>Organizacion</roleName>
       <groupName>services</groupName>
       <groupParentPath>/acme/production</groupParentPath>
     </membership>
     <membership>
       <userName>thomas.wallis</userName>
-      <roleName>member</roleName>
+      <roleName>Organizacion</roleName>
       <groupName>services</groupName>
       <groupParentPath>/acme/production</groupParentPath>
     </membership>
@@ -728,13 +718,13 @@
     </membership>
     <membership>
       <userName>misa.kumagai</userName>
-      <roleName>member</roleName>
+      <roleName>Organizacion</roleName>
       <groupName>asia</groupName>
       <groupParentPath>/acme/sales</groupParentPath>
     </membership>
     <membership>
       <userName>norio.yamazaki</userName>
-      <roleName>member</roleName>
+      <roleName>Organizacion</roleName>
       <groupName>asia</groupName>
       <groupParentPath>/acme/sales</groupParentPath>
     </membership>
@@ -745,23 +735,17 @@
       <groupParentPath>/acme/sales</groupParentPath>
     </membership>
     <membership>
-      <userName>anthony.nichols</userName>
-      <roleName>member</roleName>
-      <groupName>north_america</groupName>
-      <groupParentPath>/acme/sales</groupParentPath>
-    </membership>
-    <membership>
-      <userName>auditor</userName>
-      <roleName>member</roleName>
-      <groupName>acme</groupName>
-    </membership>
-    <membership>
       <userName>auditor</userName>
       <roleName>Auditor</roleName>
       <groupName>acme</groupName>
     </membership>
     <membership>
       <userName>walter.bates</userName>
+      <roleName>Organizacion</roleName>
+      <groupName>acme</groupName>
+    </membership>
+    <membership>
+      <userName>anthony.nichols</userName>
       <roleName>Organizacion</roleName>
       <groupName>acme</groupName>
     </membership>
